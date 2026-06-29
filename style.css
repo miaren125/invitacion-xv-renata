@@ -9,7 +9,9 @@ body {
     background-color: #f7e8eb; /* Color de fondo general */
     display: flex;
     justify-content: center;
-    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    width: 0;
 }
 
 /* --- CONTENEDOR PRINCIPAL (Para iOS y Android) --- */
@@ -21,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    margin: 0 auto;
     min-height: 100vh;
 }
 
