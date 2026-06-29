@@ -8,11 +8,9 @@
 body {
     background-color: #f7e8eb; /* Color de fondo general */
     display: flex;
-    justify-content: center; /* Centra el frame de la invitación en PC/Tablets */
+    justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100%; /* CORREGIDO: De 0 a 100% para que ocupe espacio */
-    -webkit-font-smoothing: antialiased;
 }
 
 /* --- CONTENEDOR PRINCIPAL (Para iOS y Android) --- */
@@ -24,11 +22,10 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    margin: 0 auto; /* Centra perfectamente el contenedor */
-    height: auto; /* CORREGIDO: Permite que el scroll sea libre y vertical hacia abajo */
+    min-height: 100vh;
 }
 
-/* --- IMÁGENES PRINCIPALES --- */
+/* --- IMÁGENES PRINCIPALES (Impedimento de huecos o trozos) --- */
 .img-bloque {
     width: 100%;
     height: auto;
@@ -39,47 +36,71 @@ body {
 }
 
 .img-mensaje {
-    width: 100%;
+    width: 125%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
     height: auto;
     display: block;
-    border: none;
-    vertical-align: top;
+    margin: -15px auto;
+    position: relative;
+    z-index: 5;
+    top: 30px;
+    right: 60px; /* Ajusta la posición vertical de la corona */
 }
 
 .img-mensaje2 {
-    width: 100%;
+    width: 95%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
     height: auto;
     display: block;
-    border: none;
-    vertical-align: top;
+    margin: -15px auto;
+    position: relative;
+    z-index: 5;
+    top: 20px;
 }
 
 .img-mensaje3 {
-    width: 100%;
+    width: 158%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
     height: auto;
     display: block;
-    border: none;
-    vertical-align: top;
+    margin: -15px auto;
+    position: relative;
+    top: 50px;
+    right: 130px; /* Ajusta la posición vertical de la corona */
+}
+
+.img-mensaje4 {
+    width: 140%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
+    height: auto;
+    display: block;
+    margin: -15px auto;
+    position: relative;
+    z-index: 5;
+    top: 75px;
+    right: 90px; /* Ajusta la posición vertical de la corona */
 }
 
 .img-fecha {
-    width: 100%;
+    width: 130%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
     height: auto;
     display: block;
-    border: none;
-    vertical-align: top;
+    margin: auto;
+    position: relative;
+    z-index: 5;
+    right: 60px; /* Ajusta la posición vertical de la corona */
 }
 
 .img-renata1 {
-    width: 100%;
+    width: 180%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
     height: auto;
     display: block;
-    border: none;
-    vertical-align: top;
+    margin: auto;
+    position: relative;
+    z-index: 5;
+    top: 20px; /* Ajusta la posición vertical de la corona */
+    right: 180px; /* Ajusta la posición vertical de la corona */
 }
 
+/* --- LA CORONA --- */
 .img-corona {
-    width: 35%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
+    width: 100%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
     height: auto;
     display: block;
     margin: -15px auto;
@@ -134,8 +155,8 @@ body {
 .flor-15 { 
     top: -4%; 
     right: -22%; 
-    width: 70%; 
-    transform: scaleX(-1); 
+    width: 100%; 
+    transform: rotate(5deg);   
 }
 
 /* --- MARIPOSAS EN SECCIONES FINALES --- */
@@ -145,30 +166,32 @@ body {
     pointer-events: none; 
 }
 
-/* Mariposas penúltima imagen */
+/* Mariposas imagen 8 */
 .mari-muro1-abierta {
-    width: 20%;
-    top: 10%;
-    left: 15%;
-    transform: rotate(15deg); 
+    width: 18%;
+    top: 68%;
+    right: 2%;
+    transform: rotate(-20deg);
 }
 
 .mari-muro1-volando {
-    width: 18%;
-    top: 40%;
-    right: 10%;
+    width: 15%;
+    top: 10%;
+    left: 0%;
+    transform: rotate(15deg);
 }
 
-/* Mariposas última imagen */
+/* Mariposas imagen 9 */
 .mari-muro2-abierta {
-    width: 22%;
-    top: 20%;
-    right: 15%;
+    width: 16%;
+    top: 45%;
+    left: -1%;
+    transform: rotate(30deg);
 }
 
 .mari-muro2-volando-espejo {
-    width: 18%;
-    top: 55%;
-    left: 15%;
-    transform: scaleX(-1) rotate(-10deg); 
+    width: 15%;
+    top: 65%;
+    right: 2%;
+    transform: scaleX(-1) rotate(28deg);
 }
