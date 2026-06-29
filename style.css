@@ -114,6 +114,32 @@ body {
     position: relative;
     width: 100%;
 }
+.mapa-interactivo1 {
+    position: absolute;
+    z-index: 100; /* Queda detrás del marco (18.png) pero encima de la foto base (8.png) */
+    width: 70%;  /* Reduce este valor si la flor/marco 18.png es más grande que el mapa */
+    height: 55%; /* Ajusta la altura para que encaje en el hueco */
+    top: 66%;    /* Modifica estos porcentajes de top y left para centrarlo visualmente */
+    left: 40%;
+    width: 30%;  /* Reduce este valor si la flor/marco 18.png es más grande que el mapa */
+    height: 30%;
+}
+
+.mapa-interactivo2 {
+    position: absolute;
+    z-index: 100; /* Queda detrás del marco (18.png) pero encima de la foto base (8.png) */
+    width: 30%;  /* Reduce este valor si la flor/marco 18.png es más grande que el mapa */
+    height: 55%; /* Ajusta la altura para que encaje en el hueco */
+    top: 74%;    /* Modifica estos porcentajes de top y left para centrarlo visualmente */
+    left: 36%;
+    height: 31%;
+}
+
+.fondo-googleMaps, .fondo-googleMaps2 {
+    position: absolute;
+    z-index: 30; /* ¡Súper poder! Un número alto para que nada lo tape */
+    pointer-events: auto; /* ¡Fundamental! Esto permite que la gente le pueda picar (a diferencia de las mariposas) */
+}
 
 /* --- PANEL DE CONTROL DE LAS FLORES --- */
 .flor-borde {
@@ -181,6 +207,13 @@ body {
     transform: rotate(15deg);
 }
 
+.fondo-googleMaps{
+    width: 50%;
+    height: 38%;
+    top: 62%;
+    right: 20%;
+}
+
 /* Mariposas imagen 9 */
 .mari-muro2-abierta {
     width: 16%;
@@ -194,4 +227,10 @@ body {
     top: 65%;
     right: 2%;
     transform: scaleX(-1) rotate(28deg);
+}
+
+.fondo-googleMaps2{
+    width: 50%;
+    top: 70%;
+    right: 24%;
 }
