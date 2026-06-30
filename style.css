@@ -91,18 +91,18 @@ body {
 }
 
 .img-mensaje3 {
-    width: 158%;
+    width: 168%;
     height: auto;
     display: block;
     position: relative;
     z-index: 5;
     top: 30px;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%);
 }
 
 .img-mensaje4 {
-    width: 150%; 
+    width: 157%; 
     height: auto;
     display: block;
     position: relative;
@@ -143,13 +143,13 @@ body {
 
 /* Ajustes finos para que encajen en el hueco del dorado */
 .mapa-misa {
-    top: 61%;
-    left: 54%;
+    top: 59.5%;
+    left: 56%;
     transform: translateX(-50%);
 }
 
 .mapa-recepcion { 
-    top: 60%;
+    top: 59%;
     left: 47.25%;
     transform: translateX(-50%);
 }
