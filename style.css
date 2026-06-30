@@ -143,13 +143,13 @@ body {
 
 /* Ajustes finos para que encajen en el hueco del dorado */
 .mapa-misa {
-    top: 60.5%;
+    top: 61%;
     left: 54%;
     transform: translateX(-50%);
 }
 
 .mapa-recepcion { 
-    top: 59.5%;
+    top: 60%;
     left: 47.25%;
     transform: translateX(-50%);
 }
