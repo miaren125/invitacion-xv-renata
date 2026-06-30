@@ -45,6 +45,16 @@ body {
     left: 45%; 
     transform: translateX(-45%);
 }
+
+.img-renata2 {
+    width: 100%; /* ¡Hazla gigante! Súbelo a 150% o bájalo si lo necesitas */
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 5;
+    margin-top: 10%;
+}
+
 .img-fecha {
     width: 110%; 
     height: auto;
@@ -119,12 +129,16 @@ body {
 }
 
 /* --- FLORES Y MARIPOSAS --- */
-.flor-borde { position: absolute; z-index: 20; pointer-events: none; }
+.flor-borde { position: absolute; pointer-events: none; }
 .flor-11 { top: -15%; left: -20%; width: 65%; }
 .flor-12 { top: -15%; right: -30%; width: 70%; }
 .flor-13 { bottom: -80%; right: -60%; width: 125%; transform: rotate(-4deg); }
 .flor-14 { top: -18%; left: -15%; width: 105%; transform: rotate(-10deg); }
 .flor-15 { top: -4%; right: -22%; width: 100%; transform: rotate(5deg); }
+.flor-16 { top: -20%; left: -15%; width: 105%; z-index: 20; transform: rotate(-10deg); }
+.flor-17 { top: -18%; right: -22%; width: 100%; z-index: 20; transform: rotate(5deg); }
+.flor-18 { top: 65%; left: 38%; width: 100%; z-index: 8; transform: rotate(-90deg) scaleX(-1); }
+.flor-19 { top: 65%; right: 41%; width: 100%; z-index: 8; transform: rotate(90deg); }
 
 .mariposa { position: absolute; z-index: 30; pointer-events: none; }
 .mari-muro1-abierta { width: 18%; top: 60%; right: 0%;  transform: translateX(-10%) rotate(-10deg);}
@@ -152,4 +166,56 @@ body {
     top: 59%;
     left: 47.25%;
     transform: translateX(-50%);
+}
+
+/* --- ESTILOS EXTRA PARA LA SECCIÓN DE PASES --- */
+
+.seccion-pases {
+    padding-bottom: 50px; /* Espacio al final de toda la invitación */
+    text-align: center;
+}
+
+/* Imagen del pase de Canva */
+.img-pase-especifico {
+    width: 300%;  
+    z-index: 20;
+    height: auto;
+    display: block;
+    right: 30%;
+    transform: translateX(-32%);
+}
+
+/* Contenedor del botón interactivo */
+.contenedor-boton-confirmar {
+    width: 100%;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40%;
+    margin-bottom: 20px;
+    right: 50%;
+    transform: translateX(10%);
+}
+
+.enlace-confirmar {
+    z-index: 30;
+    display: inline-block;
+    width: 65%; /* Controla qué tan grande se ve tu botón en la pantalla del celular */
+    max-width: 300px;
+    text-decoration: none;
+    transition: transform 0.2s ease; /* Efecto suave */
+}
+
+/* La imagen interna del botón (21.png) */
+.img-boton-canva {
+    width: 60%;
+    z-index: 30;
+    height: auto;
+    display: block;
+}
+
+/* Efecto feedback cuando pulsen el botón en el cel */
+.enlace-confirmar:active {
+    transform: scale(0.95); /* Se encoge un poquito al picarle, dando vibra de app real */
 }
