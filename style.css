@@ -1,4 +1,4 @@
-/* --- RESET TOTAL (Sin márgenes ocultos y adaptado a móviles) --- */
+/* --- RESET TOTAL --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,19 @@
 }
 
 body {
-    background-color: #f7e8eb; /* Color de fondo general */
+    background-color: #f7e8eb; 
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Esto mata cualquier cosa que intente hacer la pantalla más ancha */
 }
 
-/* --- CONTENEDOR PRINCIPAL (Para iOS y Android) --- */
+/* --- CONTENEDOR PRINCIPAL --- */
 .invitation-container {
     width: 100%;
-    max-width: 500px; /* Evita que se estire demasiado en tablets/PC */
-    background-color: #f7e8eb; /* Tu color de fondo exacto */
+    max-width: 500px; 
+    background-color: #f7e8eb; 
     position: relative; 
     display: flex;
     flex-direction: column;
@@ -25,8 +26,8 @@ body {
     min-height: 100vh;
 }
 
-/* --- IMÁGENES PRINCIPALES (Impedimento de huecos o trozos) --- */
-.img-bloque {
+/* --- IMÁGENES GENÉRICAS --- */
+.img-bloque, .img-fecha, .img-renata1 {
     width: 100%;
     height: auto;
     display: block;
@@ -35,202 +36,113 @@ body {
     vertical-align: top;
 }
 
-.img-mensaje {
-    width: 125%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
+.img-corona {
+    width: 100%; 
     height: auto;
     display: block;
     margin: -15px auto;
+    position: relative;
+    z-index: 5;
+    top: 60px; 
+}
+
+/* --- TUS TEXTOS GIGANTES ACOMODADITOS (El Truco Maestro) --- */
+/* left: 50% y translateX(-50%) garantizan el centrado perfecto sin importar qué tan grandes sean */
+
+.img-mensaje {
+    width: 125%; 
+    height: auto;
+    display: block;
     position: relative;
     z-index: 5;
     top: 30px;
-    right: 60px; /* Ajusta la posición vertical de la corona */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .img-mensaje2 {
-    width: 95%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
+    width: 95%; 
     height: auto;
     display: block;
-    margin: -15px auto;
     position: relative;
     z-index: 5;
     top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .img-mensaje3 {
-    width: 158%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
+    width: 158%;
     height: auto;
     display: block;
-    margin: -15px auto;
     position: relative;
-    top: 50px;
-    right: 130px; /* Ajusta la posición vertical de la corona */
+    z-index: 5;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .img-mensaje4 {
-    width: 140%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
+    width: 150%; 
     height: auto;
     display: block;
-    margin: -15px auto;
     position: relative;
     z-index: 5;
-    top: 75px;
-    right: 90px; /* Ajusta la posición vertical de la corona */
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.img-fecha {
-    width: 130%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
-    height: auto;
-    display: block;
-    margin: auto;
-    position: relative;
-    z-index: 5;
-    right: 60px; /* Ajusta la posición vertical de la corona */
-}
-
-.img-renata1 {
-    width: 180%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
-    height: auto;
-    display: block;
-    margin: auto;
-    position: relative;
-    z-index: 5;
-    top: 20px; /* Ajusta la posición vertical de la corona */
-    right: 180px; /* Ajusta la posición vertical de la corona */
-}
-
-/* --- LA CORONA --- */
-.img-corona {
-    width: 100%; /* Modifica este porcentaje si la corona se ve muy grande/pequeña */
-    height: auto;
-    display: block;
-    margin: -15px auto;
-    position: relative;
-    z-index: 5;
-    top: 60px; /* Ajusta la posición vertical de la corona */
-}
-
-/* --- CONTENEDOR DE FLORES ANCLADAS --- */
+/* --- CONTENEDORES --- */
 .seccion-relativa {
     position: relative;
     width: 100%;
 }
-.mapa-interactivo1 {
-    position: absolute;
-    z-index: 100; /* Queda detrás del marco (18.png) pero encima de la foto base (8.png) */
-    width: 70%;  /* Reduce este valor si la flor/marco 18.png es más grande que el mapa */
-    height: 55%; /* Ajusta la altura para que encaje en el hueco */
-    top: 66%;    /* Modifica estos porcentajes de top y left para centrarlo visualmente */
-    left: 40%;
-    width: 30%;  /* Reduce este valor si la flor/marco 18.png es más grande que el mapa */
-    height: 30%;
-}
 
-.mapa-interactivo2 {
-    position: absolute;
-    z-index: 100; /* Queda detrás del marco (18.png) pero encima de la foto base (8.png) */
-    width: 30%;  /* Reduce este valor si la flor/marco 18.png es más grande que el mapa */
-    height: 55%; /* Ajusta la altura para que encaje en el hueco */
-    top: 74%;    /* Modifica estos porcentajes de top y left para centrarlo visualmente */
-    left: 36%;
-    height: 31%;
-}
+/* --- FLORES Y MARIPOSAS --- */
+.flor-borde { position: absolute; z-index: 20; pointer-events: none; }
+.flor-11 { top: -15%; left: -20%; width: 65%; }
+.flor-12 { top: -15%; right: -30%; width: 70%; }
+.flor-13 { bottom: -80%; right: -60%; width: 125%; transform: rotate(-4deg); }
+.flor-14 { top: -18%; left: -15%; width: 105%; transform: rotate(-10deg); }
+.flor-15 { top: -4%; right: -22%; width: 100%; transform: rotate(5deg); }
 
-.fondo-googleMaps, .fondo-googleMaps2 {
-    position: absolute;
-    z-index: 30; /* ¡Súper poder! Un número alto para que nada lo tape */
-    pointer-events: auto; /* ¡Fundamental! Esto permite que la gente le pueda picar (a diferencia de las mariposas) */
-}
+.mariposa { position: absolute; z-index: 30; pointer-events: none; }
+.mari-muro1-abierta { width: 20%; top: 10%; left: 15%; transform: rotate(15deg); }
+.mari-muro1-volando { width: 18%; top: 40%; right: 10%; }
+.mari-muro2-abierta { width: 22%; top: 20%; right: 15%; }
+.mari-muro2-volando-espejo { width: 18%; top: 55%; left: 15%; transform: scaleX(-1) rotate(-10deg); }
 
-/* --- PANEL DE CONTROL DE LAS FLORES --- */
-.flor-borde {
+/* --- MARCO DORADO DEL MAPA (18.png) --- */
+.fondo-googleMaps {
     position: absolute;
-    z-index: 20;
+    z-index: 24; 
+    width: 80%;
+    top: 38%;
+    left: 10%;
     pointer-events: none;
 }
 
-/* Panel de control de tamaños y posiciones de enredaderas. 
-  Para cambiar el tamaño edita "width". Para moverlas edita "top", "bottom", "left" o "right".
-*/
-
-.flor-11 { 
-    top: -15%;    
-    left: -20%;   
-    width: 65%;  
-}
-
-.flor-12 { 
-    top: -15%; 
-    right: -30%; 
-    width: 70%;  
-}
-
-.flor-13 { 
-    bottom: -80%; 
-    right: -60%; 
-    width: 125%; 
-    transform: rotate(-4deg); 
-}
-
-.flor-14 { 
-    top: -18%; 
-    left: -15%; 
-    width: 105%; 
-    transform: rotate(-10deg); 
-}
-
-.flor-15 { 
-    top: -4%; 
-    right: -22%; 
-    width: 100%; 
-    transform: rotate(5deg);   
-}
-
-/* --- MARIPOSAS EN SECCIONES FINALES --- */
-.mariposa {
+.fondo-googleMaps2 {
     position: absolute;
-    z-index: 10;
-    pointer-events: none; 
+    z-index: 24; 
+    width: 80%;
+    top: 28%; /* Un poco más arriba para que encaje con la imagen 9 */
+    left: 10%;
+    pointer-events: none;
 }
 
-/* Mariposas imagen 8 */
-.mari-muro1-abierta {
-    width: 18%;
-    top: 68%;
-    right: 2%;
-    transform: rotate(-20deg);
+/* --- LOS MAPAS DE GOOGLE (Ahora están domados) --- */
+.mapa-interactivo {
+    position: absolute;
+    z-index: 23; /* ¡Detrás del marco dorado! */
+    width: 70%; /* 10% más chico que el marco */
+    height: 220px; 
+    left: 15%; /* Centrado dentro del marco */
+    border: none;
+    border-radius: 8px; /* Bordes redondos para que no salgan picos */
 }
 
-.mari-muro1-volando {
-    width: 15%;
-    top: 10%;
-    left: 0%;
-    transform: rotate(15deg);
-}
-
-.fondo-googleMaps{
-    width: 50%;
-    height: 38%;
-    top: 62%;
-    right: 20%;
-}
-
-/* Mariposas imagen 9 */
-.mari-muro2-abierta {
-    width: 16%;
-    top: 45%;
-    left: -1%;
-    transform: rotate(30deg);
-}
-
-.mari-muro2-volando-espejo {
-    width: 15%;
-    top: 65%;
-    right: 2%;
-    transform: scaleX(-1) rotate(28deg);
-}
-
-.fondo-googleMaps2{
-    width: 50%;
-    top: 70%;
-    right: 24%;
-}
+/* Ajustes finos para que encajen en el hueco del dorado */
+.mapa-misa { top: 41%; }
+.mapa-recepcion { top: 31%; }
