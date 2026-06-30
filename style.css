@@ -127,10 +127,10 @@ body {
 .flor-15 { top: -4%; right: -22%; width: 100%; transform: rotate(5deg); }
 
 .mariposa { position: absolute; z-index: 30; pointer-events: none; }
-.mari-muro1-abierta { width: 20%; top: 10%; left: 15%; transform: rotate(15deg); }
-.mari-muro1-volando { width: 18%; top: 40%; right: 10%; }
-.mari-muro2-abierta { width: 22%; top: 20%; right: 15%; }
-.mari-muro2-volando-espejo { width: 18%; top: 55%; left: 15%; transform: scaleX(-1) rotate(-10deg); }
+.mari-muro1-abierta { width: 18%; top: 60%; right: 0%;  transform: translateX(-10%) rotate(-10deg);}
+.mari-muro1-volando { width: 20%; top: 5%; left: 10%; transform: rotate(15deg) translateX(-55%);}
+.mari-muro2-abierta { width: 15%; top: 20%; left: -3%; transform: translateX(10%) rotate(10deg);}
+.mari-muro2-volando-espejo { width: 18%; top: 50%; right: 8%; transform: scaleX(-1) rotate(10deg) translateX(-40%);}
 
 /* --- LOS MAPAS DE GOOGLE (Ahora están domados) --- */
 .mapa-interactivo {
