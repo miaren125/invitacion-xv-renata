@@ -27,13 +27,32 @@ body {
 }
 
 /* --- IMÁGENES GENÉRICAS --- */
-.img-bloque, .img-fecha, .img-renata1 {
+.img-bloque{
     width: 100%;
     height: auto;
     display: block;
     margin: 0;
     border: none;
     vertical-align: top;
+}
+.img-renata1 {
+    width: 180%; /* ¡Hazla gigante! Súbelo a 150% o bájalo si lo necesitas */
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 5;
+    margin-top: 20%; /* Para separarla de lo de arriba si es necesario */
+    left: 45%; 
+    transform: translateX(-45%);
+}
+.img-fecha {
+    width: 110%; 
+    height: auto;
+    display: block;
+    margin:  -10% auto;
+    position: relative;
+    z-index: 5;
+    top: 30px;
 }
 
 .img-corona {
@@ -113,36 +132,24 @@ body {
 .mari-muro2-abierta { width: 22%; top: 20%; right: 15%; }
 .mari-muro2-volando-espejo { width: 18%; top: 55%; left: 15%; transform: scaleX(-1) rotate(-10deg); }
 
-/* --- MARCO DORADO DEL MAPA (18.png) --- */
-.fondo-googleMaps {
-    position: absolute;
-    z-index: 24; 
-    width: 80%;
-    top: 38%;
-    left: 10%;
-    pointer-events: none;
-}
-
-.fondo-googleMaps2 {
-    position: absolute;
-    z-index: 24; 
-    width: 80%;
-    top: 28%; /* Un poco más arriba para que encaje con la imagen 9 */
-    left: 10%;
-    pointer-events: none;
-}
-
 /* --- LOS MAPAS DE GOOGLE (Ahora están domados) --- */
 .mapa-interactivo {
     position: absolute;
-    z-index: 23; /* ¡Detrás del marco dorado! */
-    width: 70%; /* 10% más chico que el marco */
-    height: 220px; 
-    left: 15%; /* Centrado dentro del marco */
-    border: none;
-    border-radius: 8px; /* Bordes redondos para que no salgan picos */
+    z-index: 26; /* ¡Detrás del marco dorado! */
+    width: 28%; /* 10% más chico que el marco */
+    height: 28%; 
+    border: 15% none;
 }
 
 /* Ajustes finos para que encajen en el hueco del dorado */
-.mapa-misa { top: 41%; }
-.mapa-recepcion { top: 31%; }
+.mapa-misa {
+    top: 60%;
+    left: 54%;
+    transform: translateX(-50%);
+}
+
+.mapa-recepcion { 
+    top: 59.25%;
+    left: 47.25%;
+    transform: translateX(-50%);
+}
