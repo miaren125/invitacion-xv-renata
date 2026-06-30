@@ -107,7 +107,7 @@ body {
     position: relative;
     z-index: 5;
     top: 30px;
-    left: 52%;
+    left: 54%;
     transform: translateX(-50%);
 }
 
@@ -118,7 +118,7 @@ body {
     position: relative;
     z-index: 5;
     top: 30px;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%);
 }
 
@@ -152,19 +152,19 @@ body {
     z-index: 26; /* ¡Detrás del marco dorado! */
     width: 28%; /* 10% más chico que el marco */
     height: 28%; 
-    border: 15% none;
+    border: none;
 }
 
 /* Ajustes finos para que encajen en el hueco del dorado */
 .mapa-misa {
     top: 59.5%;
-    left: 56%;
+    left: 58%;
     transform: translateX(-50%);
 }
 
 .mapa-recepcion { 
     top: 59%;
-    left: 47.25%;
+    left: 49%;
     transform: translateX(-50%);
 }
 
@@ -181,8 +181,8 @@ body {
     z-index: 20;
     height: auto;
     display: block;
-    right: 30%;
-    transform: translateX(-32%);
+    right: 40%;
+    transform: translateX(-31%);
 }
 
 /* Contenedor del botón interactivo */
@@ -194,8 +194,8 @@ body {
     align-items: center;
     margin-top: -40%;
     margin-bottom: 20px;
-    right: 50%;
-    transform: translateX(10%);
+    right: 52%;
+    transform: translateX(14%);
 }
 
 .enlace-confirmar {
